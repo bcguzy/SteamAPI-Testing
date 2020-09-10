@@ -2,6 +2,7 @@
   
 //document.getElementById("change").innerHTML = "Hello World";
 function getPlayerInfo(){
+    var playerInfo;
     fetch('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=1FBE4A2A938B56E4B696B13F88A04DBF&steamids=76561197960435530',{
         mode: 'cors',
         headers:{
@@ -10,6 +11,7 @@ function getPlayerInfo(){
     }
     )
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => PlayerInfo);
+    document.getElementById("info").innerHTML = PlayerInfo;
 }
 
