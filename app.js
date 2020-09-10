@@ -11,7 +11,7 @@ function getPlayerInfo(){
     }
     )
     .then(response => response.json())
-    .then(data => PlayerInfo);
+    .then(PlayerInfo = data);
     document.getElementById("info").innerHTML = PlayerInfo;
 }
 
